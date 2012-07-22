@@ -1,0 +1,13 @@
+﻿@model TheNuggetList.Domain.Util.Paging.PagedList<TheNuggetList.Domain.Entities.Nugget>
+
+
+@Html.Partial("_Pagination", Model)
+
+<ul>
+    @foreach (var Nugget in Model)
+    {
+        <li>
+        @Html.Partial("_Nugget", Nugget)         
+        </li>
+    }
+</ul>

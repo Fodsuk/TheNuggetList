@@ -1,0 +1,9 @@
+﻿@model Nugget
+
+@Html.Action("Votes", "Voting", new { ContentObjectPK = @Model.ID, contentTypeName = @Model.ContentTypeName })
+
+<span><a href="/nuggets/@Model.ID">@Model.Title</a></span><br />
+<p>@Model.Description</p>
+
+
+@Html.Action("CommentsForContentType", "Comments", new { ContentObjectPK = @Model.ID, contentTypeName = @Model.ContentTypeName })

@@ -1,0 +1,19 @@
+﻿<div class="module latestTweets">
+    <header class="hd">
+        <h1>Latest Tweets</h1>
+        <a href="#" class="button">Follow Us</a>
+    </header>
+    <div class="bd">
+        <ul>
+            @foreach (TweetSharp.TwitterStatus tweet in ViewBag.Tweets)
+            {
+                <li>
+                    <p>@tweet.Text @tweet.Id</p>                   
+                    <span class="date">posted @tweet.CreatedDate.GetElapsedTime() ago</span>
+                </li>
+            }
+        </ul>              	
+    </div>       
+</div>
+   
+             

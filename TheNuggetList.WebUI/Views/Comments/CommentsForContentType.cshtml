@@ -1,0 +1,26 @@
+﻿
+<div class="comments">
+
+<form id="AddCommentForm" method="post" action="/comments/addcomment">
+
+    @Html.TextArea("Content", new { id = "Content" })
+
+    @Html.Hidden("ContentObjectPK", (long)ViewBag.ContentObjectPK, new { id = "ContentObjectPK" })
+    @Html.Hidden("ContentTypeName", (string)ViewBag.ContentTypeName, new { id = "ContentTypeName" })  
+    @Html.Hidden("RedirectUrl", (string)ViewBag.RedirectUrl, new { id = "RedirectUrl" })  
+    
+    <input type="submit" value="Add Comment" />
+
+</form>
+
+
+<ul id="CommentsList">
+@foreach (Comment comment in ViewBag.Comments)
+{
+    <li>
+        <p>@comment.Content</p>
+    </li>    
+}
+</ul>
+
+</div>

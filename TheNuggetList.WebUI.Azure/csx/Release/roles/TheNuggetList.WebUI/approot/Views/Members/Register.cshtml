@@ -1,0 +1,16 @@
+﻿@model TheNuggetList.WebUI.ViewModels.RegistrationViewModel
+
+@{
+    ViewBag.Title = "Register";
+}
+
+<form method="post" id="LoginForm" action="?">
+	<fieldset>
+		<legend>Register</legend>
+        <h2>Register</h2>
+		@Html.ValidationSummary()
+        @Html.EditorForModel()
+
+        <input type="submit" title="Register" />
+    </fieldset>
+</form>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="TheNuggetList.WebUI.Azure" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="1" osVersion="*">
+  <Role name="TheNuggetList.WebUI">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="mike" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEGTzXQ9JAdeORERBtpHXzrwwDQYJKoZIhvcNAQEBBQAEggEAhcJo7XF5bJy1Bfkpzd3Vi2H7aLc8eSa8gRjC/OyVdY1u27uotusOFApB0UkVfrH7o2NxsMM8LNzPuOb3EO1OBlSWXZyJNzgdNIBdZDjh3U3UqZ6/NaI08o9087cT1MHuAHQ7Xh8hxj6mcuda7l5A/CvqZ8/BCVNZiDuSWi6R79dh/hWYxiL3TCQ63Fx3740RQxlwW8FRgE5OOvRbGYSVDktIoQ1onuGAreSToX3qDiq61MxN3hLrJGJMWszVM/S/Ojg1qCz3q/8KsE6TqCs2c6gXoZ81KOH22KA4yRESgld8nwHugzqHwmlv6lLZTuFpQqs6Jo9J8C++j5x3/CPB9jAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECOFU5kU0HmxcgBBsm9xG6sfysCgmPQqkoguL" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2013-04-13T23:59:59.0000000+01:00" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="CA5B07E8948C952295C8FB6957CABFBCDE84B2F4" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

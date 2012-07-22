@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D235A42-4C05-46D9-ABC6-55ECEDC8F166}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheNuggetList.WebUI</RootNamespace>
+    <AssemblyName>TheNuggetList.WebUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hammock">
+      <HintPath>..\packages\Hammock.1.2.1\lib\net40\Hammock.dll</HintPath>
+    </Reference>
+    <Reference Include="Hammock.ClientProfile">
+      <HintPath>..\packages\TweetSharp.2.0.3\lib\4.0\Hammock.ClientProfile.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Entity.CTP, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Data.Entity.CTP.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\TweetSharp.2.0.3\lib\4.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=2.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="TweetSharp">
+      <HintPath>..\packages\TweetSharp.2.0.3\lib\4.0\TweetSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\CommentsController.cs" />
+    <Compile Include="Controllers\AchievementsController.cs" />
+    <Compile Include="Controllers\MyAccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MembersController.cs" />
+    <Compile Include="Controllers\NuggetsController.cs" />
+    <Compile Include="Controllers\TagsController.cs" />
+    <Compile Include="Controllers\TwitterController.cs" />
+    <Compile Include="Controllers\VotingController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Infrastructure\NinjectControllerFactory.cs" />
+    <Compile Include="Infrastructure\NuggetsKernel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidationAttributes\PropertiesMustMatchAttribute.cs" />
+    <Compile Include="ViewModels\Members\LoginViewModel.cs" />
+    <Compile Include="ViewModels\MyAccount\ChangePasswordViewModel.cs" />
+    <Compile Include="ViewModels\Nuggets\AddNuggetViewModel.cs" />
+    <Compile Include="ViewModels\Members\RegistrationViewModel.cs" />
+    <Compile Include="ViewModels\Votes\VoteViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="apple-touch-icon.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\comments.js" />
+    <Content Include="Scripts\jquery-1.4.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Scripts\voting.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <None Include="_bin_deployableAssemblies\System.Web.Mvc.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Helpers.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.Razor.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Deployment.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.dll" />
+    <None Include="_bin_deployableAssemblies\System.Web.WebPages.Razor.dll" />
+    <None Include="_bin_deployableAssemblies\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="_css\style.css" />
+    <Content Include="_font\lobster\Lobster_1.3-webfont.svg" />
+    <Content Include="_font\lobster\stylesheet.css" />
+    <Content Include="_font\roundup\roundup-webfont.svg" />
+    <Content Include="_font\roundup\stylesheet.css" />
+    <Content Include="_images\bkg\dirt.png" />
+    <Content Include="_images\bkg\flag.png" />
+    <Content Include="_images\bkg\footer\bullet.png" />
+    <Content Include="_images\bkg\footer\dirt-gloss.png" />
+    <Content Include="_images\bkg\footer\divider.png" />
+    <Content Include="_images\bkg\footer\footer-nuggets.png" />
+    <Content Include="_images\bkg\footer\grass.png" />
+    <Content Include="_images\bkg\footer\help.png" />
+    <Content Include="_images\bkg\footer\modules\header.png" />
+    <Content Include="_images\bkg\footer\nugget.png" />
+    <Content Include="_images\bkg\mag.gif" />
+    <Content Include="_images\bkg\modules\poster\divider.png" />
+    <Content Include="_images\bkg\modules\poster\foot.png" />
+    <Content Include="_images\bkg\modules\poster\middle.png" />
+    <Content Include="_images\bkg\modules\poster\nugget.png" />
+    <Content Include="_images\bkg\modules\poster\top.png" />
+    <Content Include="_images\bkg\modules\sidecol\generic\hd.gif" />
+    <Content Include="_images\bkg\modules\sidecol\generic\shadow.gif" />
+    <Content Include="_images\bkg\static.png" />
+    <Content Include="_images\bkg\wood.png" />
+    <Content Include="_images\buttons\gloss\05.png" />
+    <Content Include="_images\buttons\gloss\10.png" />
+    <Content Include="_images\buttons\gloss\15.png" />
+    <Content Include="_images\buttons\gloss\20.png" />
+    <Content Include="_images\buttons\gloss\25.png" />
+    <Content Include="_images\buttons\gloss\30.png" />
+    <Content Include="_images\buttons\gloss\35.png" />
+    <Content Include="_images\buttons\gloss\45.png" />
+    <Content Include="_images\buttons\gloss\50.png" />
+    <Content Include="_images\buttons\gloss\55.png" />
+    <Content Include="_images\buttons\gloss\60.png" />
+    <Content Include="_images\buttons\gloss\65.png" />
+    <Content Include="_images\buttons\gloss\70.png" />
+    <Content Include="_images\buttons\gloss\75.png" />
+    <Content Include="_images\buttons\gloss\80.png" />
+    <Content Include="_images\buttons\gloss\85.png" />
+    <Content Include="_images\buttons\gloss\90.png" />
+    <Content Include="_images\buttons\gloss\95.png" />
+    <Content Include="_images\buttons\gloss\est.png" />
+    <Content Include="_images\buttons\icons\backward.png" />
+    <Content Include="_images\buttons\icons\forward.png" />
+    <Content Include="_images\icons\webkit-search-cancel.png" />
+    <Content Include="_images\logos\beta.png" />
+    <Content Include="_images\logos\nugget-list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TheNuggetList.Domain\TheNuggetList.Domain.csproj">
+      <Project>{C23D5565-4DF5-41F7-88D0-34ACA5106650}</Project>
+      <Name>TheNuggetList.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Nuggets\Add.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Nuggets\EditorTemplates\NuggetViewModel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Nuggets\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Nuggets\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Nuggets\DisplayTemplates\NuggetViewModel.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Nuggets\ListNuggets.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Nuggets\_ListNuggets.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Nuggets\_Nugget.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_Pagination.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Members\Register.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Members\EditorTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Members\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tags\_AddTagsToContentType.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Tags\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Comments\CommentsForContentType.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Views\Twitter\_ListLatest.cshtml" />
+    <Content Include="Views\MyAccount\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MyAccount\ChangePassword.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Achievements\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\MyAccount\Achievements.cshtml" />
+    <Content Include="Views\Voting\Votes.cshtml" />
+    <None Include="_font\lobster\Lobster_1.3-webfont.eot" />
+    <None Include="_font\lobster\Lobster_1.3-webfont.ttf" />
+    <None Include="_font\lobster\Lobster_1.3-webfont.woff" />
+    <None Include="_font\roundup\roundup-webfont.eot" />
+    <None Include="_font\roundup\roundup-webfont.ttf" />
+    <None Include="_font\roundup\roundup-webfont.woff" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51400</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

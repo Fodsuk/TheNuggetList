@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C23D5565-4DF5-41F7-88D0-34ACA5106650}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TheNuggetList.Domain</RootNamespace>
+    <AssemblyName>TheNuggetList.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Data.Entity.CTP, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Microsoft.Data.Entity.CTP.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\TheNuggetList.WebUI\bin\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Achievements\AchievementListenersRegistration.cs" />
+    <Compile Include="Achievements\IAchievementListenersRegistration.cs" />
+    <Compile Include="Achievements\Listeners\Abstract\IMemberRegisteredAchievementListener.cs" />
+    <Compile Include="Achievements\Listeners\Concrete\AchievementListener.cs" />
+    <Compile Include="Achievements\Listeners\Concrete\MemberRegisteredAchievementListener.cs" />
+    <Compile Include="Entities\Achievement.cs" />
+    <Compile Include="Entities\EarnedAchievement.cs" />
+    <Compile Include="Entities\Comment.cs" />
+    <Compile Include="Entities\MemberStatistics.cs" />
+    <Compile Include="Entities\IContentType.cs" />
+    <Compile Include="Entities\IEntity.cs" />
+    <Compile Include="Entities\Vote.cs" />
+    <Compile Include="Events\EventAggregator\EventAggregator.cs" />
+    <Compile Include="Events\EventAggregator\IDirectedEvent.cs" />
+    <Compile Include="Events\EventAggregator\IEvent.cs" />
+    <Compile Include="Events\EventAggregator\IEventAggregator.cs" />
+    <Compile Include="Events\EventAggregator\IListenTo.cs" />
+    <Compile Include="Events\EventAggregator\TypeExtensions.cs" />
+    <Compile Include="Events\MemberRegisteredEvent.cs" />
+    <Compile Include="Repositories\AchievementsRepository.cs" />
+    <Compile Include="Repositories\EarnedAchievementsRepository.cs" />
+    <Compile Include="Repositories\IEarnedAchievementsRepository.cs" />
+    <Compile Include="Repositories\CommentsRepository.cs" />
+    <Compile Include="Repositories\IAchievementsRepository.cs" />
+    <Compile Include="Repositories\ICommentsRepository.cs" />
+    <Compile Include="Repositories\IMemberStatisticsRepository.cs" />
+    <Compile Include="Repositories\IVotesRepository.cs" />
+    <Compile Include="Repositories\MemberStatisticsRepository.cs" />
+    <Compile Include="Repositories\IContentTypeRepository.cs" />
+    <Compile Include="Repositories\IMembersRepository.cs" />
+    <Compile Include="Repositories\ContentTypeRepository.cs" />
+    <Compile Include="Repositories\INuggetsRepository.cs" />
+    <Compile Include="Repositories\ITaggedItemsRepository.cs" />
+    <Compile Include="Repositories\ITagsRepository.cs" />
+    <Compile Include="Repositories\TaggedItemsRepository.cs" />
+    <Compile Include="Repositories\TagsRepository.cs" />
+    <Compile Include="Repositories\MembersRepository.cs" />
+    <Compile Include="Repositories\NuggetsRepository.cs" />
+    <Compile Include="Repositories\TheNuggetsListDbContext.cs" />
+    <Compile Include="Entities\ContentType.cs" />
+    <Compile Include="Entities\Member.cs" />
+    <Compile Include="Entities\Nugget.cs" />
+    <Compile Include="Entities\Tag.cs" />
+    <Compile Include="Entities\TaggedItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\VotesRepository.cs" />
+    <Compile Include="Services\CommentsService.cs" />
+    <Compile Include="Services\AchievementsService.cs" />
+    <Compile Include="Services\IAchievementsService.cs" />
+    <Compile Include="Services\ICommentsService.cs" />
+    <Compile Include="Services\IMemberAuthenticationService.cs" />
+    <Compile Include="Services\INuggetsService.cs" />
+    <Compile Include="Services\IServiceLocator.cs" />
+    <Compile Include="Services\ITagsService.cs" />
+    <Compile Include="Services\IVotingService.cs" />
+    <Compile Include="Services\MembersAuthenticationService.cs" />
+    <Compile Include="Services\NinjectServiceLocator.cs" />
+    <Compile Include="Services\TagsService.cs" />
+    <Compile Include="Services\NuggetsService.cs" />
+    <Compile Include="Services\VotingService.cs" />
+    <Compile Include="Util\CsvTagsParser.cs" />
+    <Compile Include="Util\DateTimeExtensionMethods.cs" />
+    <Compile Include="Util\DebugHelper.cs" />
+    <Compile Include="Util\ITagParser.cs" />
+    <Compile Include="Util\Paging\IPagedList.cs" />
+    <Compile Include="Util\Paging\PagedList.cs" />
+    <Compile Include="Util\Paging\Pagination.cs" />
+    <Compile Include="Util\RequestExtensionMethods.cs" />
+    <Compile Include="Util\UrlHelper.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

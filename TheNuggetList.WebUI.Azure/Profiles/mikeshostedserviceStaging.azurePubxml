@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AzureCredentials>Windows Azure MSDN - Visual Studio Ultimate</AzureCredentials>
+    <AzureHostedServiceName>mikeshostedservice</AzureHostedServiceName>
+    <AzureHostedServiceLabel>mikeshostedservice</AzureHostedServiceLabel>
+    <AzureSlot>Staging</AzureSlot>
+    <AzureEnableIntelliTrace>False</AzureEnableIntelliTrace>
+    <AzureEnableProfiling>False</AzureEnableProfiling>
+    <AzureEnableWebDeploy>False</AzureEnableWebDeploy>
+    <AzureStorageAccountName>mikeshostedservice</AzureStorageAccountName>
+    <AzureStorageAccountLabel>mikeshostedservice</AzureStorageAccountLabel>
+    <AzureDeploymentLabel>TheNuggetList.WebUI.Azure</AzureDeploymentLabel>
+    <AzureSolutionConfiguration>Release</AzureSolutionConfiguration>
+    <AzureServiceConfiguration>Cloud</AzureServiceConfiguration>
+    <AzureAppendTimestampToDeploymentLabel>True</AzureAppendTimestampToDeploymentLabel>
+    <AzureAllowUpgrade>True</AzureAllowUpgrade>
+    <AzureEnableRemoteDesktop>True</AzureEnableRemoteDesktop>
+  </PropertyGroup>
+</Project>

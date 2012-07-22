@@ -1,0 +1,17 @@
+﻿@model  TheNuggetList.WebUI.ViewModels.Votes.VoteViewModel
+
+<div class="vote">
+    <a class="up-vote" title="Up vote this"
+        rel="@Model.UpVoteAjaxUrl" 
+        href="@Model.UpVoteUrl@Model.ReturnUrl">
+        Up
+    </a>
+    <span class="vote-count">@Model.VoteCount</span>
+    <a class="down-vote" title="Down vote this"
+        rel="@Model.DownVoteAjaxUrl" 
+        href="@Model.DownVoteUrl@Model.ReturnUrl">
+        Down
+    </a>
+</div>
+
+

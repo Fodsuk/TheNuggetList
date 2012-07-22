@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Tags";   
+}
+
+<h2>Tags associated: 
+    @foreach (Tag tag in ViewBag.Tags)
+    {
+        @string.Format("{0} ", tag.Name);  
+    } 
+ </h2>
+
+ <ul>
+ @foreach (Nugget nugget in ViewBag.Nuggets)
+ {
+     <li>@nugget.Title
+     <br />
+     <span>@nugget.Description</span>
+     </li>     
+ }
+ </ul>
+

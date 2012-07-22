@@ -1,0 +1,21 @@
+﻿@model TheNuggetList.Domain.Util.Paging.PagedList<TheNuggetList.Domain.Entities.EarnedAchievement>
+
+@{
+    ViewBag.Title = "Achievements";
+}
+
+<h2>Achievements</h2>
+
+@Html.Partial("_Pagination", Model)
+<ul>
+	@foreach (var EarnedAchievement in Model)
+    {
+		<li>
+			<div>
+				<h3>@EarnedAchievement.Achievement.Name</h3>
+				<p>@EarnedAchievement.Achievement.Description</p>
+				<p>Achieved on: @EarnedAchievement.Created</p>
+			</div>
+		</li>
+    }
+</ul>
